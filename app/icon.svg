@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #F8F9FA; }
+    .accent { fill: #14B8A6; }
+    .accent-secondary { fill: #047857; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #111827; }
+      .accent { fill: #2DD4BF; }
+      .accent-secondary { fill: #10B981; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14"/>
+  <polyline points="18,20 32,32 18,44" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" class="accent"/>
+  <rect x="34" y="41" width="14" height="5" rx="2.5" class="accent-secondary"/>
+</svg>

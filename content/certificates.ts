@@ -1,0 +1,183 @@
+import type { Certificate } from './schemas/certificate.schema';
+
+export const certificates: Certificate[] = [
+  // ── Software, Data & Networking ──────────────────────────────
+  {
+    title: 'C++ Essentials 1',
+    issuer: 'Cisco Networking Academy via Virtual University (Quetta Campus)',
+    date: '2025-05-12',
+    domain: 'software',
+    verifyUrl: 'https://cp.certmetrics.com/cisco/en/public/verify/credential',
+  },
+  {
+    title: 'Networking Essentials',
+    issuer: 'Cisco Networking Academy via Virtual University (Peshawar Campus)',
+    date: '2026-06-22',
+    id: '4240177d-8041-4cf5-b11d-192361b7eb1e',
+    domain: 'software',
+    verifyUrl: 'https://cp.certmetrics.com/cisco/en/public/verify/credential',
+  },
+  {
+    title: 'Artificial Intelligence using Python',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 03',
+    date: '2026-07-20',
+    id: 'D788ZWVMK',
+    domain: 'software',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'Data Analytics and Business Intelligence',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 02',
+    date: '2026-03-14',
+    id: 'UN8SEF7MK',
+    domain: 'data',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'WordPress',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 02',
+    date: '2026-03-14',
+    id: '4JATGUSMK',
+    domain: 'software',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+
+  // ── Design ───────────────────────────────────────────────────
+  {
+    title: 'Graphic Design',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 01',
+    date: '2025-12-17',
+    id: 'NWJ7PXNMK',
+    domain: 'design',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'Mastering UI/UX',
+    issuer: 'Innovista Learn Easy',
+    date: '2026-03-05',
+    id: '589-12054-113160',
+    domain: 'design',
+    verifyUrl: 'https://learneasy.pk/validate-certificate/',
+  },
+
+  // ── Marketing & Business ─────────────────────────────────────
+  {
+    title: 'Digital Marketing',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 01',
+    date: '2025-12-17',
+    id: '7S68W8NMK',
+    domain: 'marketing',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'SEO (Search Engine Optimization)',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 01',
+    date: '2025-12-17',
+    id: '6AXERASMK',
+    domain: 'marketing',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'Affiliate Marketing',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 02',
+    date: '2026-03-14',
+    id: 'KUHWZV4MK',
+    domain: 'marketing',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'E-Commerce Management',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 01',
+    date: '2025-12-17',
+    id: 'YKCYFYMMK',
+    domain: 'marketing',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'Freelancing',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 01',
+    date: '2025-12-17',
+    id: 'DX6H7PMMK',
+    domain: 'marketing',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'Startup Strategies and Entrepreneurship',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 02',
+    date: '2026-03-14',
+    id: 'EJHNSBZMK',
+    domain: 'marketing',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'Virtual Assistant',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 03',
+    date: '2026-07-20',
+    id: 'MN52W3UMK',
+    domain: 'marketing',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+
+  // ── Office & Operations ──────────────────────────────────────
+  {
+    title: 'Office Management',
+    issuer: 'Professional Computer Academy, Sambrial',
+    date: '2024-01/2024-06',
+    id: '019575',
+    domain: 'office',
+    verifyUrl: 'https://professionalcomputer.pk/online-verification/',
+  },
+  {
+    title: 'English Language',
+    issuer: 'Professional Computer Academy, Sambrial',
+    date: '2024-01/2024-06',
+    id: '019576',
+    domain: 'communication',
+    verifyUrl: 'https://professionalcomputer.pk/online-verification/',
+  },
+
+  // ── Communication & Career ───────────────────────────────────
+  {
+    title: 'Communication and Soft Skills',
+    issuer: 'DigiSkills Training Program (DSTP 3.0), Batch 02',
+    date: '2026-03-14',
+    id: '3BM5JEUMK',
+    domain: 'communication',
+    verifyUrl: 'https://digiskills.pk/verify',
+  },
+  {
+    title: 'Business Email',
+    issuer: 'HP LIFE (HP Foundation)',
+    date: '2026',
+    id: '49bf9d0e-4df3-4bbf-87bc-c157ddfd760e',
+    domain: 'communication',
+  },
+  {
+    title: 'AI for Business Professionals',
+    issuer: 'HP LIFE (HP Foundation)',
+    date: '2026',
+    id: 'f29f7ae8-8ed3-4d45-af9c-e5fe714d25e3',
+    domain: 'software',
+  },
+  {
+    title: 'Critical Thinking in the AI Era',
+    issuer: 'HP LIFE (HP Foundation)',
+    date: '2026',
+    id: 'bed1f456-43d8-4baf-93ae-bd95b61b425a',
+    domain: 'software',
+  },
+  {
+    title: 'Professional Networking for Career Growth',
+    issuer: 'HP LIFE (HP Foundation)',
+    date: '2026',
+    id: 'af2d975f-f89d-4044-a23f-2802b521bb84',
+    domain: 'communication',
+  },
+  {
+    title: 'Success Mindset',
+    issuer: 'HP LIFE (HP Foundation)',
+    date: '2026',
+    id: '69215d3f-17cc-41ae-97cf-23453470d4b6',
+    domain: 'communication',
+  },
+];
