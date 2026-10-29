@@ -46,27 +46,40 @@ export function CertificateVault() {
           </p>
         </div>
 
-        {/* Filter Chips */}
-        <div className="flex gap-2 mb-8 overflow-x-auto pb-2 scrollbar-none sm:flex-wrap sm:overflow-visible sm:pb-0">
-          {domains.map((domain) => (
-            <button
-              key={domain}
-              onClick={() => setFilter(domain)}
-              className={`chip shrink-0 text-xs sm:text-sm ${
-                filter === domain ? 'chip-active' : ''
-              }`}
+        {/* Filter Dropdown */}
+        <div className="mb-8">
+          <label htmlFor="cert-filter" className="sr-only">
+            Filter by domain
+          </label>
+          <div className="relative max-w-xs">
+            <select
+              id="cert-filter"
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              className="w-full appearance-none rounded-lg border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 pr-10 text-sm text-[var(--foreground)] outline-none transition-colors hover:border-[var(--accent)] focus:border-[var(--accent)]"
               style={{
-                borderColor: domain !== 'all' ? domainColors[domain] : undefined,
+                borderColor: filter !== 'all' ? domainColors[filter] : undefined,
               }}
             >
-              {domain === 'all' ? 'All' : domainLabels[domain]}
-              <span className="ml-2 text-xs opacity-70">
-                {domain === 'all'
-                  ? certificates.length
-                  : certificates.filter((c) => c.domain === domain).length}
-              </span>
-            </button>
-          ))}
+              {domains.map((domain) => (
+                <option key={domain} value={domain}>
+                  {domain === 'all'
+                    ? `All Domains (${certificates.length})`
+                    : `${domainLabels[domain]} (${certificates.filter((c) => c.domain === domain).length})`}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+              <svg
+                className="h-4 w-4 text-[var(--text-muted)]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
         </div>
 
         {/* Certificate Grid */}

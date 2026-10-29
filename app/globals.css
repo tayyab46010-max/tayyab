@@ -887,8 +887,8 @@
 
   /* ── Theme / accent color transition ────────────────────────── */
   .theme-animating,
-  .theme-animating *:not(canvas) {
-    transition-property: background-color, border-color, color, fill, stroke, box-shadow !important;
+  .theme-animating *:not(canvas):not(svg):not(svg *) {
+    transition-property: background-color, border-color, color, box-shadow !important;
     transition-duration: 760ms !important;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !important;
   }
@@ -995,7 +995,7 @@ input, textarea, [contenteditable='true'] {
 
 @media (max-width: 767px) {
   .section {
-    padding-block: 4rem;
+    padding-block: 2rem;
   }
 
   .container-wide,
