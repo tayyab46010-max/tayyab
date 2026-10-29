@@ -29,7 +29,7 @@ export function BusinessCard({ profile }: { profile: Profile }) {
 
   useEffect(() => {
     // Generate QR code client-side for reliable scanning
-    QRCode.toDataURL('https://tayyab.co', {
+    QRCode.toDataURL('https://tayyabme.vercel.app', {
       width: 200,
       margin: 2,
       color: {
@@ -82,7 +82,7 @@ export function BusinessCard({ profile }: { profile: Profile }) {
 
   return (
     <>
-      <div className="w-full max-w-5xl mx-auto px-2 sm:px-4">
+      <div className="w-full max-w-5xl mx-auto px-1 sm:px-4">
         {/* Header */}
         <motion.div
           className="text-center mb-8 sm:mb-12"
@@ -101,7 +101,7 @@ export function BusinessCard({ profile }: { profile: Profile }) {
         {/* 3D Card Container */}
         <div className="perspective-1500 mb-8 sm:mb-12">
           <motion.div
-            className="relative w-full aspect-[1.75/1] sm:aspect-[1.75/1] cursor-pointer mx-auto"
+            className="relative w-full aspect-[3/4] sm:aspect-[1.75/1] cursor-pointer mx-auto"
             style={{ maxWidth: '700px', transformStyle: 'preserve-3d' }}
             animate={{ rotateY: isFlipped ? 180 : 0 }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
@@ -172,40 +172,40 @@ export function BusinessCard({ profile }: { profile: Profile }) {
                       </p>
 
                       {/* Contact info - clean list */}
-                      <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
-                        <div className="flex items-center gap-3 text-sm text-[var(--text-secondary)]">
-                          <MapPin className="w-4 h-4 text-[var(--accent)] flex-shrink-0" />
+                      <div className="space-y-1 sm:space-y-2 mb-3 sm:mb-6">
+                        <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-[var(--text-secondary)]">
+                          <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-[var(--accent)] flex-shrink-0" />
                           <span>{profile.location.city}, {profile.location.country}</span>
                         </div>
                         <a
                           href={`mailto:${profile.email}`}
                           onClick={(e) => e.stopPropagation()}
-                          className="flex items-center gap-3 text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
+                          className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
                         >
-                          <Mail className="w-4 h-4 text-[var(--accent)] flex-shrink-0" />
-                          <span>{profile.email}</span>
+                          <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-[var(--accent)] flex-shrink-0" />
+                          <span className="truncate">{profile.email}</span>
                         </a>
                         <a
                           href={`tel:${profile.phone.replace(/\s+/g, '')}`}
                           onClick={(e) => e.stopPropagation()}
-                          className="flex items-center gap-3 text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
+                          className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
                         >
-                          <Phone className="w-4 h-4 text-[var(--accent)] flex-shrink-0" />
+                          <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-[var(--accent)] flex-shrink-0" />
                           <span>{profile.phone}</span>
                         </a>
                       </div>
 
                       {/* Social links - minimal */}
-                      <div className="flex gap-2 sm:gap-3">
+                      <div className="flex gap-1.5 sm:gap-3">
                         <a
                           href={profile.whatsapp}
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
-                          className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--background)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/10 transition-all border border-[var(--border)]"
+                          className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[var(--background)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/10 transition-all border border-[var(--border)]"
                           title="WhatsApp"
                         >
-                          <MessageCircle className="w-4 h-4" />
+                          <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         </a>
                         {profile.links.linkedin && (
                           <a
@@ -213,10 +213,10 @@ export function BusinessCard({ profile }: { profile: Profile }) {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--background)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/10 transition-all border border-[var(--border)]"
+                            className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[var(--background)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/10 transition-all border border-[var(--border)]"
                             title="LinkedIn"
                           >
-                            <Link2 className="w-4 h-4" />
+                            <Link2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                           </a>
                         )}
                         {profile.links.github && (
@@ -225,10 +225,10 @@ export function BusinessCard({ profile }: { profile: Profile }) {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--background)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/10 transition-all border border-[var(--border)]"
+                            className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[var(--background)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/10 transition-all border border-[var(--border)]"
                             title="GitHub"
                           >
-                            <Code2 className="w-4 h-4" />
+                            <Code2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                           </a>
                         )}
                       </div>

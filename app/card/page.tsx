@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function CardPage() {
   return (
-    <section className="section flex items-center justify-center min-h-[calc(100dvh-8rem)] relative overflow-hidden">
+    <section className="section flex items-center justify-center min-h-[calc(100dvh-8rem)] relative">
       {/* Subtle radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
