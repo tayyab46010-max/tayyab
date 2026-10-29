@@ -29,7 +29,7 @@ export function BusinessCard({ profile }: { profile: Profile }) {
 
   useEffect(() => {
     // Generate QR code client-side for reliable scanning
-    QRCode.toDataURL('https://tayyabme.vercel.app', {
+    QRCode.toDataURL('https://tayyabme.vercel.app/', {
       width: 200,
       margin: 2,
       color: {
