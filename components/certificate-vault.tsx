@@ -36,23 +36,23 @@ export function CertificateVault() {
   return (
     <section className="section" id="certificates">
       <div className="container-page">
-        <div className="mb-12">
-          <h2 className="glow-text text-4xl md:text-5xl font-bold mb-4">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="glow-text text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             Certificate Vault
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl">
+          <p className="text-text-secondary text-base sm:text-lg max-w-2xl">
             {certificates.length} verified credentials across {domains.length - 1} domains.
             Click any card to view details.
           </p>
         </div>
 
         {/* Filter Chips */}
-        <div className="flex flex-wrap gap-3 mb-8">
+        <div className="flex gap-2 mb-8 overflow-x-auto pb-2 scrollbar-none sm:flex-wrap sm:overflow-visible sm:pb-0">
           {domains.map((domain) => (
             <button
               key={domain}
               onClick={() => setFilter(domain)}
-              className={`chip ${
+              className={`chip shrink-0 text-xs sm:text-sm ${
                 filter === domain ? 'chip-active' : ''
               }`}
               style={{

@@ -5,9 +5,14 @@ import { ContactForm } from '@/components/contact-form';
 import { Mail, MessageCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: 'Contact Tayyab Ali — Hire a Shopify & Web Developer',
   description:
-    'Get in touch with Tayyab Ali for business development, operations, or freelance opportunities.',
+    'Get in touch for freelance e-commerce development, Shopify store setup, Webflow, WordPress, or custom React projects. Remote worldwide.',
+  openGraph: {
+    title: 'Contact Tayyab Ali — Hire a Shopify & Web Developer',
+    description:
+      'Available for freelance e-commerce projects, custom store setups, and frontend development. Reply within 24 hours.',
+  },
 };
 
 export default function ContactPage() {
@@ -22,7 +27,7 @@ export default function ContactPage() {
         ]}
       />
 
-      <section className="section" style={{ width: 'min(55%, 1200px)', marginInline: 'auto', paddingInline: 'var(--spacing-6)' }}>
+      <section className="section w-[90%] sm:w-[min(55%,1200px)] mx-auto px-4 sm:px-6">
         <h1 className="text-4xl font-bold">Contact</h1>
         <p className="mt-4 text-lg text-[var(--foreground)]/80">
           Open to business development, operations, and freelance opportunities.

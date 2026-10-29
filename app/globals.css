@@ -1022,5 +1022,17 @@ input, textarea, [contenteditable='true'] {
   h1 {
     text-wrap: balance;
   }
+
+  .certificate-card {
+    height: 240px;
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
 }
 

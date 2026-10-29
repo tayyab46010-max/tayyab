@@ -22,9 +22,14 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Resume',
+  title: 'Resume — Tayyab Ali | Shopify, Webflow & React Developer',
   description:
-    'Downloadable CV and work history for Tayyab Ali — inventory operations, software engineering student, and freelance web developer.',
+    'Downloadable CV and work history for Tayyab Ali — e-commerce development, inventory operations, and freelance web development. 22 verified certifications.',
+  openGraph: {
+    title: 'Resume — Tayyab Ali | Shopify, Webflow & React Developer',
+    description:
+      'View work experience, skills, certifications, and download CV. Available for freelance and full-time remote opportunities.',
+  },
 };
 
 const SKILL_GROUPS = [
@@ -122,7 +127,7 @@ export default function ResumePage() {
             </div>
 
             {/* Quick stats */}
-            <div className="relative mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+            <div className="relative mt-8 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4">
               {[
                 { value: `${experiences.length}`, label: 'Operations roles' },
                 { value: `${certificateCount}`, label: 'Certifications' },
@@ -131,12 +136,12 @@ export default function ResumePage() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-center"
+                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-3 py-2.5 text-center sm:px-4 sm:py-3"
                 >
-                  <p className="font-display text-2xl font-extrabold text-[var(--accent)]">
+                  <p className="font-display text-xl sm:text-2xl font-extrabold text-[var(--accent)]">
                     {stat.value}
                   </p>
-                  <p className="mt-0.5 text-[11px] uppercase tracking-wider text-[var(--text-muted)]">
+                  <p className="mt-0.5 text-[10px] sm:text-[11px] uppercase tracking-wider text-[var(--text-muted)]">
                     {stat.label}
                   </p>
                 </div>
@@ -285,7 +290,7 @@ export default function ResumePage() {
           {/* ── Certificates ────────────────────────────────────────── */}
           <ScrollReveal>
             <section>
-              <h2 className="mb-2 flex items-center gap-2 text-xl font-bold">
+              <h2 className="mb-2 flex flex-wrap items-center gap-2 text-xl font-bold">
                 <span className="flex size-8 items-center justify-center rounded-lg bg-[var(--glass-bg)]">
                   <Award className="size-4 text-[var(--accent)]" aria-hidden="true" />
                 </span>
@@ -308,14 +313,14 @@ export default function ResumePage() {
                     className="group flex items-start justify-between gap-3 rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 transition-colors duration-300 hover:border-[var(--accent)]"
                   >
                     <div className="min-w-0">
-                      <p className="truncate text-sm font-semibold" title={cert.title}>
+                      <p className="text-sm font-semibold leading-snug">
                         {cert.title}
                       </p>
-                      <p className="truncate text-xs text-[var(--text-muted)]" title={cert.issuer}>
+                      <p className="text-xs text-[var(--text-muted)]">
                         {cert.issuer}
                       </p>
                       {cert.id && (
-                        <p className="mono mt-1 truncate text-[10px] text-[var(--text-muted)]">
+                        <p className="mono mt-1 text-[10px] text-[var(--text-muted)]">
                           ID: {cert.id}
                         </p>
                       )}

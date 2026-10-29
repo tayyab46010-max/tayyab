@@ -142,12 +142,14 @@ export function ContactForm({ email, whatsapp }: ContactFormProps) {
             {sent ? (
               <>
                 <CheckCircle className="size-4" aria-hidden="true" />
-                Sent!
+                <span className="hidden sm:inline">Sent!</span>
+                <span className="sm:hidden">Sent</span>
               </>
             ) : (
               <>
                 <Send className="size-4" aria-hidden="true" />
-                Send via WhatsApp
+                <span className="hidden sm:inline">Send via WhatsApp</span>
+                <span className="sm:hidden">Send</span>
               </>
             )}
           </button>

@@ -331,8 +331,8 @@ export default function HomePage() {
               <div className="space-y-8">
                 {experiences.map((exp, i) => (
                   <TiltTimelineItem key={i}>
-                    <div className="flex items-start justify-between gap-4 flex-wrap">
-                      <div>
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                      <div className="min-w-0">
                         <div className="font-bold text-lg">{exp.role}</div>
                         <div className="text-sm text-[var(--text-secondary)]">
                           {exp.company}
@@ -352,15 +352,15 @@ export default function HomePage() {
                         <div className="mono text-xs text-[var(--text-muted)] mb-3">
                           SUPPLY CHAIN DATA STREAM
                         </div>
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-3 gap-2 sm:gap-4">
                           <div className="text-center">
-                            <div className="data-ticker text-2xl">99.8%</div>
+                            <div className="data-ticker text-xl sm:text-2xl">99.8%</div>
                             <div className="text-xs text-[var(--text-muted)] mt-1">
                               Accuracy
                             </div>
                           </div>
                           <div className="text-center">
-                            <div className="mono text-2xl font-bold text-[var(--accent-secondary)]">
+                            <div className="mono text-xl sm:text-2xl font-bold text-[var(--accent-secondary)]">
                               HIGH
                             </div>
                             <div className="text-xs text-[var(--text-muted)] mt-1">
@@ -368,7 +368,7 @@ export default function HomePage() {
                             </div>
                           </div>
                           <div className="text-center">
-                            <div className="mono text-2xl font-bold text-[var(--foreground)]">
+                            <div className="mono text-xl sm:text-2xl font-bold text-[var(--foreground)]">
                               6mo
                             </div>
                             <div className="text-xs text-[var(--text-muted)] mt-1">
@@ -384,15 +384,15 @@ export default function HomePage() {
                         <div className="mono text-xs text-[var(--text-muted)] mb-3">
                           INVENTORY OPERATIONS
                         </div>
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-3 gap-2 sm:gap-4">
                           <div className="text-center">
-                            <div className="data-ticker text-2xl">99.8%</div>
+                            <div className="data-ticker text-xl sm:text-2xl">99.8%</div>
                             <div className="text-xs text-[var(--text-muted)] mt-1">
                               Accuracy
                             </div>
                           </div>
                           <div className="text-center">
-                            <div className="mono text-2xl font-bold text-[var(--accent-secondary)]">
+                            <div className="mono text-xl sm:text-2xl font-bold text-[var(--accent-secondary)]">
                               DAILY
                             </div>
                             <div className="text-xs text-[var(--text-muted)] mt-1">
@@ -400,7 +400,7 @@ export default function HomePage() {
                             </div>
                           </div>
                           <div className="text-center">
-                            <div className="mono text-2xl font-bold text-[var(--foreground)]">
+                            <div className="mono text-xl sm:text-2xl font-bold text-[var(--foreground)]">
                               ACTIVE
                             </div>
                             <div className="text-xs text-[var(--text-muted)] mt-1">
@@ -439,8 +439,8 @@ export default function HomePage() {
               <div className="space-y-8">
                 {education.map((edu, i) => (
                   <TiltTimelineItem key={i}>
-                    <div className="flex items-start justify-between gap-4 flex-wrap">
-                      <div>
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                      <div className="min-w-0">
                         <div className="font-bold text-lg">{edu.degree}</div>
                         <div className="text-sm text-[var(--text-secondary)]">
                           {edu.institution}

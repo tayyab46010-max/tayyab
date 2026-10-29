@@ -82,26 +82,26 @@ export function BusinessCard({ profile }: { profile: Profile }) {
 
   return (
     <>
-      <div className="w-full max-w-5xl mx-auto px-4">
+      <div className="w-full max-w-5xl mx-auto px-2 sm:px-4">
         {/* Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-3">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-2 sm:mb-3">
             Digital Business Card
           </h1>
-          <p className="text-lg text-[var(--text-secondary)]">
+          <p className="text-sm sm:text-lg text-[var(--text-secondary)]">
             Connect professionally — scan, save, or share
           </p>
         </motion.div>
 
         {/* 3D Card Container */}
-        <div className="perspective-1500 mb-12">
+        <div className="perspective-1500 mb-8 sm:mb-12">
           <motion.div
-            className="relative w-full aspect-[1.75/1] cursor-pointer mx-auto"
+            className="relative w-full aspect-[1.75/1] sm:aspect-[1.75/1] cursor-pointer mx-auto"
             style={{ maxWidth: '700px', transformStyle: 'preserve-3d' }}
             animate={{ rotateY: isFlipped ? 180 : 0 }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
@@ -137,10 +137,10 @@ export function BusinessCard({ profile }: { profile: Profile }) {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--accent)] via-[var(--accent-secondary)] to-[var(--accent)]" />
 
                 {/* Content */}
-                <div className="relative h-full flex flex-col md:flex-row p-8 md:p-10">
+                <div className="relative h-full flex flex-col md:flex-row p-4 sm:p-6 md:p-10">
                   {/* Left - Photo & Branding */}
-                  <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8 flex flex-col items-center md:items-start">
-                    <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-xl overflow-hidden shadow-lg mb-4">
+                  <div className="flex-shrink-0 mb-4 sm:mb-6 md:mb-0 md:mr-8 flex flex-col items-center md:items-start">
+                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl overflow-hidden shadow-lg mb-3 sm:mb-4">
                       {profile.photos && profile.photos.length > 0 ? (
                         <ProfileCarousel photos={profile.photos} />
                       ) : (
@@ -164,15 +164,15 @@ export function BusinessCard({ profile }: { profile: Profile }) {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.2, duration: 0.6 }}
                     >
-                      <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-1 tracking-tight">
+                      <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-[var(--foreground)] mb-1 tracking-tight">
                         {profile.name}
                       </h2>
-                      <p className="text-base md:text-lg text-[var(--accent)] font-semibold mb-4">
+                      <p className="text-sm sm:text-base md:text-lg text-[var(--accent)] font-semibold mb-2 sm:mb-4">
                         {profile.title}
                       </p>
 
                       {/* Contact info - clean list */}
-                      <div className="space-y-2 mb-6">
+                      <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
                         <div className="flex items-center gap-3 text-sm text-[var(--text-secondary)]">
                           <MapPin className="w-4 h-4 text-[var(--accent)] flex-shrink-0" />
                           <span>{profile.location.city}, {profile.location.country}</span>
@@ -196,7 +196,7 @@ export function BusinessCard({ profile }: { profile: Profile }) {
                       </div>
 
                       {/* Social links - minimal */}
-                      <div className="flex gap-3">
+                      <div className="flex gap-2 sm:gap-3">
                         <a
                           href={profile.whatsapp}
                           target="_blank"
@@ -268,24 +268,24 @@ export function BusinessCard({ profile }: { profile: Profile }) {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--accent-secondary)] via-[var(--accent)] to-[var(--accent-secondary)]" />
 
                 {/* Content */}
-                <div className="relative h-full flex flex-col items-center justify-center p-8 text-center">
+                <div className="relative h-full flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 text-center">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
-                    className="space-y-5 w-full max-w-sm"
+                    className="space-y-3 sm:space-y-5 w-full max-w-sm"
                   >
                     <div>
-                      <h3 className="text-2xl font-bold text-[var(--foreground)] mb-1">
+                      <h3 className="text-lg sm:text-2xl font-bold text-[var(--foreground)] mb-1">
                         Scan to Connect
                       </h3>
-                      <p className="text-sm text-[var(--text-secondary)]">
+                      <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
                         Point your camera at the QR code
                       </p>
                     </div>
 
                     {/* Real QR Code */}
-                    <div className="w-44 h-44 mx-auto bg-white rounded-xl p-3 shadow-lg border border-[var(--border)]">
+                    <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 mx-auto bg-white rounded-xl p-2 sm:p-3 shadow-lg border border-[var(--border)]">
                       {qrDataUrl ? (
                         <img
                           src={qrDataUrl}
@@ -302,15 +302,15 @@ export function BusinessCard({ profile }: { profile: Profile }) {
                     </div>
 
                     {/* Action buttons */}
-                    <div className="space-y-2.5 pt-2">
+                    <div className="space-y-2 sm:space-y-2.5 pt-1 sm:pt-2">
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
                           handleDownloadVCard();
                         }}
-                        className="w-full px-5 py-2.5 rounded-lg bg-[var(--accent)] text-white font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2 text-sm shadow-lg"
+                        className="w-full px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-[var(--accent)] text-white font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2 text-xs sm:text-sm shadow-lg"
                       >
-                        <Download className="w-4 h-4" />
+                        <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         Save Contact
                       </button>
                       <button
@@ -318,9 +318,9 @@ export function BusinessCard({ profile }: { profile: Profile }) {
                           e.stopPropagation();
                           handleShare();
                         }}
-                        className="w-full px-5 py-2.5 rounded-lg bg-[var(--background)] text-[var(--foreground)] font-semibold hover:bg-[var(--surface)] transition-colors border border-[var(--border)] flex items-center justify-center gap-2 text-sm"
+                        className="w-full px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-[var(--background)] text-[var(--foreground)] font-semibold hover:bg-[var(--surface)] transition-colors border border-[var(--border)] flex items-center justify-center gap-2 text-xs sm:text-sm"
                       >
-                        <Share2 className="w-4 h-4" />
+                        <Share2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         Share Card
                       </button>
                     </div>
