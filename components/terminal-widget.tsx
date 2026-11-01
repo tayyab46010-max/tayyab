@@ -52,9 +52,6 @@ Soft Skills:
 
   education: `Education:
 
-[2026 → Present] BS Software Engineering
-  Virtual University of Pakistan — Sambrial Campus
-
 [2024 → 2026] Associate Degree in Computer Science
   Virtual University of Pakistan — Sambrial Campus
 

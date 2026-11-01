@@ -2,13 +2,6 @@ import type { Education } from './schemas/education.schema';
 
 export const education: Education[] = [
   {
-    degree: 'BS Software Engineering',
-    institution: 'Virtual University of Pakistan',
-    campus: 'Sambrial Campus',
-    start: '2026',
-    end: 'present',
-  },
-  {
     degree: 'Associate Degree in Computer Science',
     institution: 'Virtual University of Pakistan',
     campus: 'Sambrial Campus',

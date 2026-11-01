@@ -17,7 +17,6 @@ export function PersonJsonLd() {
       addressCountry: profile.location.country,
     },
     knowsAbout: [
-      'Software Engineering',
       'Frontend Development',
       'UI/UX Design',
       'Webflow Development',
