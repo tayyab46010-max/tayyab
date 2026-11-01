@@ -6,7 +6,6 @@ const ROW_ONE = [
   'Data Analyst',
   'Business Development',
   'UI/UX Design',
-  'Software Engineering',
   'Data Analytics',
   'Inventory Management',
   'Problem Solving',

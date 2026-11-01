@@ -65,18 +65,17 @@ export default function HomePage() {
               <p className="mt-4 flex min-h-[1.8em] items-center text-xl font-semibold text-[var(--accent-secondary)] md:text-2xl">
                 <Typewriter
                   phrases={[
-                    'Software Engineer',
                     'Data Analyst',
                     'Graphics Designer',
                     'Marketing Expert',
                     'Business Development',
                   ]}
-                  ariaLabel="Software Engineer & Data Analyst"
+                  ariaLabel="Data Analyst & Business Development"
                 />
               </p>
 
               <WordReveal className="mt-6 text-lg text-[var(--text-secondary)] max-w-2xl leading-relaxed">
-                Software engineering student with hands-on experience in warehouse operations,
+                UI/UX Designer with hands-on experience in warehouse operations,
                 inventory management, and full-stack development.
               </WordReveal>
               <WordReveal className="mt-3 text-lg text-[var(--text-secondary)] max-w-2xl leading-relaxed">

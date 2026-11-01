@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'nodejs';
-export const alt = 'Tayyab Ali — Software Engineering Student & Business Development';
+export const alt = 'Tayyab Ali — UI/UX Designer & Business Development';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -11,7 +11,7 @@ export default async function handler(request?: Request) {
     'Tayyab Ali';
   const subtitle =
     new URL(request?.url || 'http://localhost:3000/opengraph-image').searchParams.get('subtitle') ||
-    'Software Engineering Student · Sialkot, Pakistan';
+    'UI/UX Designer · Sialkot, Pakistan';
 
   return new ImageResponse(
     (

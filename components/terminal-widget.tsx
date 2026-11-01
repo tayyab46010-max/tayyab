@@ -20,8 +20,8 @@ const COMMANDS: Record<string, string> = {
   clear         Clear terminal
   exit          Close terminal`,
 
-  about: `Tayyab Ali — Software Engineering Student & UI/UX Designer
-Bridging clean code, analytical data, and user experience.
+  about: `Tayyab Ali — UI/UX Designer & Business Development
+Bridging clean design, analytical data, and user experience.
 Based in Sialkot, Pakistan.`,
 
   skills: `Technical Skills:

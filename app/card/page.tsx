@@ -4,7 +4,7 @@ import { BusinessCard } from '@/components/business-card';
 
 export const metadata: Metadata = {
   title: 'Business Card — Tayyab Ali',
-  description: 'Digital business card for Tayyab Ali — Software Engineer & Business Development. Scan QR, save contact, or share.',
+  description: 'Digital business card for Tayyab Ali — UI/UX Designer & Business Development. Scan QR, save contact, or share.',
   robots: {
     index: false,
     follow: true,
