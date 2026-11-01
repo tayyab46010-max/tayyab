@@ -17,7 +17,7 @@ export function Footer() {
             Tayyab<span className="text-[var(--accent)]">.</span>
           </p>
           <p className="text-sm text-[var(--text-secondary)]">
-            Software Engineer & UI/UX Designer
+            UI/UX Designer
           </p>
           <p className="text-sm text-[var(--text-muted)]">
             Sialkot, Pakistan
